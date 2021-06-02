@@ -1286,11 +1286,9 @@ img {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  border-top: 1px solid #ff0000;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  padding-top: 2.5em; }
+  display: flex; }
   .site-footer .site-info {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1317,8 +1315,8 @@ img {
       padding: 0.58182em 15px; }
   .site-footer .to-top {
     border: 0;
-    color: #00ffff;
-    display: none;
+    color: #fd5f66;
+    display: block;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
