@@ -462,7 +462,8 @@ input[type="reset"],
   text-align: center;
   text-decoration: none;
   -webkit-transition: .3s ease;
-  transition: .3s ease; }
+  transition: .3s ease;
+  word-wrap: break-word; }
   button:hover, button:focus, button:active,
   input[type="submit"]:hover,
   input[type="submit"]:focus,
@@ -568,7 +569,10 @@ img {
     font-size: 1.77778em; }
 
   blockquote {
-    font-size: 1.55556em; } }
+    font-size: 1.55556em; }
+
+  button, .button {
+    font-size: 12px; } }
 /**
  * Custom Icons
  */
@@ -1220,6 +1224,9 @@ img {
       margin-left: 1.5vw;
       margin-right: 1.5vw; } }
 @media only screen and (min-width: 801px) and (max-width: 1000px), only screen and (max-width: 600px) {
+  .book-details .buy-buttons button {
+    font-size: 12px; }
+
   .book-card {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
