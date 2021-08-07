@@ -254,8 +254,8 @@ pre {
   font-size: 0.88889rem; }
 
 pre {
-  background-color: #ffff00;
-  border: 1px solid #ff0000;
+  background-color: #f6f6f6;
+  border: 1px solid #009762;
   border-radius: 5px;
   color: #0000ff;
   margin: 1.66667rem 0;
@@ -312,13 +312,13 @@ li > ol {
   margin-bottom: 0; }
 
 hr {
-  background-color: #ff0000;
+  background-color: #009762;
   border: 0;
   height: 1px;
   margin: 1.66667em 0; }
 
 table {
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 1px solid #009762;
   line-height: 1.5;
   margin: 0 0 1.66667rem;
   max-width: 100%;
@@ -334,7 +334,7 @@ caption {
 
 th,
 td {
-  border-top: 1px solid #ff0000;
+  border-top: 1px solid #009762;
   padding: 0.5em 5px; }
 
 th {
@@ -362,16 +362,15 @@ input[type="search"],
 input[type="url"],
 select,
 textarea {
-  background: #ffff00;
-  border: 1px solid #ff0000;
-  border-radius: 5px;
+  background: #f6f6f6;
+  border: 1px solid #009762;
+  border-radius: 0px;
   box-shadow: none;
   box-sizing: border-box;
-  color: #00ffff;
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1;
   max-width: 100%;
   padding: 0.5em 10px;
   vertical-align: baseline;
@@ -451,7 +450,7 @@ input[type="reset"],
 .button {
   background: #00ff00;
   border: 2px solid #00ff00;
-  border-radius: 30px;
+  border-radius: 0px;
   box-sizing: border-box;
   color: #fff;
   display: inline-block;
@@ -758,7 +757,7 @@ img {
  */
 .site-header {
   background: #fff;
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 1px solid #009762;
   color: #ffd654; }
 
 .site-header-inside {
@@ -1081,7 +1080,7 @@ img {
   margin-bottom: 1.66667em;
   width: 50%; }
   .post-card .post-inside {
-    border: 1px solid #ff0000;
+    border: 1px solid #009762;
     border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
