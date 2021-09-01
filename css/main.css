@@ -1396,43 +1396,115 @@ img {
   margin-bottom: 3.33333em;
   position: relative; }
 
-.book-details .book-text {
-  width: 40%;
-  float: right; }
-  .book-details .book-text .book-header {
-    margin-bottom: 1.66667em;
-    color: #003050; }
-    .book-details .book-text .book-header .book-lead {
-      font-size: 1.5em;
-      margin: 0 0 1.66667rem;
-      color: #003050;
-      padding-bottom: 0.5em;
-      border-bottom: 3px solid #fd5f66; }
-      .book-details .book-text .book-header .book-lead a {
-        border: 0;
-        color: inherit; }
-        .book-details .book-text .book-header .book-lead a:hover {
-          color: #009762; }
-    .book-details .book-text .book-header .book-blurb {
-      font-size: 1.0em;
-      font-weight: bold;
-      line-height: 1.5;
-      color: #009762; }
-.book-details .book-cover {
-  padding-right: 5%;
-  width: 55%;
-  float: left; }
-  .book-details .book-cover img {
-    width: 100%; }
+/* Feed */
+.lander-feed-inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.lander-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 40px; }
+  .lander-card a {
+    border: none;
+    color: inherit; }
+  .lander-card .lander-card-inside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin-left: 0.83333em;
+    margin-right: 0.83333em;
+    overflow: hidden; }
+
+.center {
+  justify-content: center; }
+
+.lower-card .testimonial {
+  font-size: 14px; }
+  .lower-card .testimonial .flourish {
+    text-align: center; }
+  .lower-card .testimonial img {
+    height: 3em; }
+  .lower-card .testimonial p {
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 0.5em; }
+  .lower-card .testimonial .source {
+    text-align: right; }
+  .lower-card .testimonial form {
+    margin-top: 20px;
+    text-align: center; }
+.lower-card .image img {
+  width: 100%; }
+
+.left-lander-card {
+  -ms-flex: 0 0 54%;
+  flex: 0 0 54%;
+  margin-right: 1%;
+  width: 54%; }
+
+.left-buy-form {
+  text-align: right; }
+
+.right-buy-form {
+  text-align: left; }
+
+.right-lander-card {
+  -ms-flex: 0 0 44%;
+  flex: 0 0 44%;
+  margin-right: 1%;
+  width: 44%; }
+
+.book-details .book-text .book-header {
+  margin-bottom: 1.66667em;
+  color: #003050; }
+  .book-details .book-text .book-header .book-lead {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: #003050;
+    padding-bottom: 0.5em;
+    border-bottom: 3px solid #fd5f66; }
+    .book-details .book-text .book-header .book-lead a {
+      border: 0;
+      color: inherit; }
+      .book-details .book-text .book-header .book-lead a:hover {
+        color: #009762; }
+  .book-details .book-text .book-header .book-blurb {
+    font-size: 1.0em;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #009762; }
+.book-details .book-cover img {
+  width: 100%; }
 .book-details .book-summary {
   font-size: 14px;
   line-height: 1.5;
   color: #003050; }
+  .book-details .book-summary p {
+    margin-bottom: 0.5em; }
 .book-details .book-release-date {
   font-size: 1.0em;
   font-weight: bold;
   line-height: 1.5;
   color: #fd5f66; }
+  .book-details .book-release-date p {
+    margin-bottom: 0em; }
 .book-details .buy-buttons button {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -1464,11 +1536,23 @@ img {
   .book-details .buy-buttons button {
     font-size: 12px; }
 
-  .book-card {
-    -webkit-box-flex: 0;
+  .left-lander-card {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
-    width: 100%; } }
+    margin-right: 0%;
+    width: 100%; }
+
+  .right-lander-card {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-right: 0%;
+    width: 100%; }
+
+  .left-buy-form {
+    text-align: center; }
+
+  .right-buy-form {
+    text-align: center; } }
 /**
  * Sections
  */
