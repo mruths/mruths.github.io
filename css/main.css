@@ -1187,6 +1187,7 @@ img {
   .ae-page-content .ae-page-element {
     margin-bottom: 14px; }
   .ae-page-content .ae-page-subheader {
+    margin-top: 30px;
     color: #009762;
     font-weight: bold;
     font-size: 18px;
@@ -1226,7 +1227,7 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: 1.66667em;
+  margin-bottom: 0px;
   margin-right: 1%;
   width: 48%; }
   .ae-page-card .ae-card-component {
