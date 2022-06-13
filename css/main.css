@@ -1939,6 +1939,10 @@ button.action-button, button:active.action-button, button:hover.action-button, b
       font-weight: normal;
       font-style: italic; }
 
+.action-card-link-wrapper {
+  color: #000000;
+  border: none; }
+
 .action-cards {
   display: -ms-flexbox;
   display: -webkit-flex;
