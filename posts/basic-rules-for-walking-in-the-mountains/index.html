@@ -70,6 +70,7 @@
             
           
         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="/css/main.css">
         
@@ -79,7 +80,7 @@
     <body>
         
         <div id="page" class="site style-overflow palette-blue">
-  <header id="masthead" class="site-header dark">
+  <header id="masthead" class="site-header light">
   <div class="site-header-wrap">
     <div class="site-header-inside">
 
@@ -87,32 +88,32 @@
         
         
         <p class="profile">
-          <a href='/'><img src="/images/logomark.svg"
+          <a href='/'><img src="/images/logomark_bw.png"
               class="avatar" alt="Author avatar" /></a>
         </p><!-- .profile -->
         
-        <!--
-        <div class="site-identity">
-          <p class="site-title"><a href='/'>Mitali Ruths</a></p>
-          
-          
-          <p class="site-description">Three Book Deal Author!</p>
-          
-        </div>--><!-- .site-identity -->
+      </div><!-- .site-branding -->
+
         
         <button id="menu-toggle" class="menu-toggle"><span class="screen-reader-text">Menu</span><span class="icon-menu"
             aria-hidden="true"></span></button>
         
-      </div><!-- .site-branding -->
 
       
       <nav id="main-navigation" class="site-navigation" aria-label="Main Navigation">
         <div class="site-nav-wrap">
           <div class="site-nav-inside">
 
-            
-            
             <ul class="menu">
+              
+                
+                
+                <li class="menu-item">
+                  <a href="/books-main"
+                    
+                    
+                    >Books</a>
+                </li>
               
                 
                 
@@ -126,19 +127,10 @@
                 
                 
                 <li class="menu-item">
-                  <a href="/activities/"
+                  <a href="/contact/"
                     
                     
-                    >Activities</a>
-                </li>
-              
-                
-                
-                <li class="menu-item">
-                  <a href="/events/"
-                    
-                    
-                    >Events</a>
+                    >Contact</a>
                 </li>
               
                 
@@ -150,19 +142,7 @@
                     >Instagram</a>
                 </li>
               
-                
-                
-                <li class="menu-item">
-                  <a href="/contact/"
-                    
-                    
-                    >Contact</a>
-                </li>
-              
             </ul><!-- .menu -->
-            
-            
-            
           </div><!-- .site-nav-inside -->
         </div><!-- .site-nav-wrap -->
       </nav><!-- .site-navigation -->
@@ -231,5 +211,29 @@
 
         <script src="/js/init.js"></script>
         <script src="/js/page-load.js"></script>
+
+        <!-- Code for the action buttons -->
+        <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function toggleActionMenu(dropdownElementId) {
+          document.getElementById(dropdownElementId).classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.action-button')) {
+            var dropdowns = document.getElementsByClassName("action-dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+
     </body> 
 </html>
