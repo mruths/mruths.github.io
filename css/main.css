@@ -2220,9 +2220,6 @@ button.action-button, button:active.action-button, button:hover.action-button, b
   -ms-flex-align: center;
   align-items: center; }
 
-.pd-lead .opener img {
-  width: 30%; }
-
 .pd-lead .opener .title {
   color: #009762;
   font-weight: bold;
