@@ -1789,12 +1789,15 @@ body.has-theme-bar #masthead {
   display: inline-block;
   width: 100%; }
 
-button.action-button, button:active.action-button, button:hover.action-button, button:focus.action-button {
+button.action-button,
+button:active.action-button,
+button:hover.action-button,
+button:focus.action-button {
   color: #000000;
   background-color: #ffd654;
   border: 2px solid #000000;
   border-radius: 27px;
-  width: 60%;
+  width: 100%;
   min-width: 160px;
   padding-left: 15px;
   padding-right: 15px;
@@ -1827,7 +1830,7 @@ button.action-button, button:active.action-button, button:hover.action-button, b
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  width: 60%;
+  width: 100%;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -2049,7 +2052,10 @@ button.action-button, button:active.action-button, button:hover.action-button, b
       padding-top: 40px; }
 
 @media only screen and (max-width: 800px) {
-  button.action-button, button:active.action-button, button:hover.action-button, button:focus.action-button {
+  button.action-button,
+  button:active.action-button,
+  button:hover.action-button,
+  button:focus.action-button {
     width: 100%;
     min-width: 160px;
     padding-left: 15px;
@@ -2115,6 +2121,27 @@ button.action-button, button:active.action-button, button:hover.action-button, b
 
   .action-cards .action-card {
     width: 70%; } }
+.series-header {
+  margin-top: 40px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 .book-cards {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -2143,9 +2170,27 @@ button.action-button, button:active.action-button, button:hover.action-button, b
 
 .book-cards .book-card {
   font-size: 12px;
-  text-align: center;
   margin-left: 10px;
-  margin-right: 10px; }
+  margin-right: 10px;
+  flex: 0.70 1 0;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: start;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .book-card img {
   height: 350px;
@@ -2158,15 +2203,16 @@ button.action-button, button:active.action-button, button:hover.action-button, b
 
 .book-card .title p {
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 0; }
 
 .book-card .title p:last-child {
   font-size: 20px; }
 
-.book-card .arrow {
-  font-size: 20px; }
+.book-card .action-container {
+  width: 80%;
+  max-width: 300px; }
 
 @media only screen and (max-width: 800px) {
   .book-cards {
@@ -2220,6 +2266,11 @@ button.action-button, button:active.action-button, button:hover.action-button, b
   -ms-flex-align: center;
   align-items: center; }
 
+/*
+.pd-lead .opener img {
+    width: 30%
+}
+*/
 .pd-lead .opener .title {
   color: #009762;
   font-weight: bold;
