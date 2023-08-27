@@ -2267,6 +2267,9 @@ button:focus.action-button {
   -ms-flex-align: center;
   align-items: center; }
 
+.pd-lead {
+  margin-bottom: 40px; }
+
 .pd-lead .opener {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -2328,7 +2331,9 @@ button:focus.action-button {
 .pd-lead-covers img {
   width: 40%;
   box-shadow: 10px 10px 10px #00000029;
-  opacity: 1; }
+  opacity: 1;
+  margin-left: 10px;
+  margin-right: 10px; }
 
 .pd-lead .blurbs p {
   text-align: center;
