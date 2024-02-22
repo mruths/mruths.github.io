@@ -1065,6 +1065,9 @@ img {
 /**
  * Posts adn Pages
  */
+.ae-center-text {
+  text-align: center; }
+
 .ae-page {
   margin-bottom: 3.33333em;
   position: relative; }
@@ -1176,6 +1179,13 @@ img {
   .ae-page-card .ae-title {
     color: #009762;
     font-size: 0.9em;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 10px; }
+  .ae-page-card .ae-title-header {
+    color: #003050;
+    font-size: 1.33333em;
+    line-height: 1.4em;
     font-weight: bold;
     margin: 0;
     padding-bottom: 10px; }
@@ -2403,7 +2413,8 @@ button:focus.action-button {
 .pd-feature .book .title p {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  line-height: 1.2em; }
 
 .pd-feature .book .title p:last-child {
   font-size: 38px; }
