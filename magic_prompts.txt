@@ -1,0 +1,23 @@
+The prompt for generating action links (buy):
+
+Please put the following entries into a JSON format like this:
+[
+  { 
+     "title": "USA",
+     "items": [
+          { 
+             "text": "<store name>",
+             "url": "<url>"
+           },
+           ...
+        ],
+      },
+      {
+          "title": "International",
+          "items": [
+               ....
+          ]
+        }
+    ]
+
+Here are the entries:
