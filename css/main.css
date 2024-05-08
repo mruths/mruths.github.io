@@ -1612,6 +1612,15 @@ img {
   border-color: #003050; }
   .palette-blue a:hover {
     border-color: currentColor; }
+.palette-blue .hollow {
+  background: transparent;
+  border: 2px solid #003050;
+  color: #003050;
+  padding: 0.75714em 35px; }
+  .palette-blue .hollow:hover, .palette-blue .hollow:focus, .palette-blue .hollow:active {
+    background-color: #003050;
+    border-color: #003050;
+    color: #FFFFFF; }
 .palette-blue button,
 .palette-blue input[type="submit"],
 .palette-blue input[type="button"],
