@@ -2233,11 +2233,17 @@ button:focus.action-button {
   -ms-flex-align: center;
   align-items: center; }
 
+.book-card.double {
+  flex: 2 1 400px; }
+
 .book-card img {
   height: 250px;
   max-width: 100vw;
   box-shadow: 10px 10px 10px #00000029;
   opacity: 1; }
+
+img.no-shadow {
+  box-shadow: none; }
 
 .book-card .title {
   margin-top: 20px;
