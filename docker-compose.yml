@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  jekyll:
+    build: .
+    ports:
+      - "4356:4000"
+    volumes:
+      # Mount source for live reload (exclude vendor to use container gems)
+      - .:/site
+      - /site/vendor
+      - /site/.bundle
+    command: bundle exec jekyll serve --host 0.0.0.0 --port 4000 --livereload
