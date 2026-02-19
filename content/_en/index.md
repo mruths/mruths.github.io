@@ -22,12 +22,11 @@ content_elements:
       - content:
           - text:
               text: |
-                <b>Dear readers,</b><br/><br/>
-                Book 6 of The Party Diaries exists because of you. Every time you read, recommend, library-request, or tell a friend — it tells the publisher that these stories matter. And right now this is the last book I'm under contract for… which means pre-orders really matter.<br/><br/>
+                Dear readers,<br/><br/>
+                Book 6 of The Party Diaries exists because of you. Every time you read, recommend, library-request, or tell a friend — it tells the publisher that these stories matter.<br/><br/>
                 Pre-orders are what show there's still excitement for more parties to come.<br/><br/>
                 If you're planning to read it anyway, placing a pre-order makes a huge difference for the future of the series — more than almost anything else you can do.<br/><br/>
-                <b>As a thank-you:</b><br/>
-                Anyone who pre-orders can fill out this quick Google form to receive exclusive bonus content and an invite to the virtual launch party!<br/><br/>
+                As a thank-you: Anyone who pre-orders can fill out <a href="https://forms.gle/6bvoAoRjapeahW2H9">this quick Google form</a> to receive exclusive bonus content and an invite to the virtual launch party!<br/><br/>
                 Thank you for your love of The Party Diaries. I truly wouldn't be here without you.<br/><br/>
                 🧡 Mitali
     card_pct_size: 45
