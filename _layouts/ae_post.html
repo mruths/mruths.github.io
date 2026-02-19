@@ -103,7 +103,7 @@ layout: body
               <div class="details"> 
                 <p>{{ book.blurbs.details[nav_language] }}</p>
                 Release Date: {{ book.release_date[nav_language] }}<br/>
-                ISBN-10: {{ book.isbn.isbn_10 }}<br/>
+                {% if book.isbn.isbn_10 and book.isbn.isbn_10 != "" %}ISBN-10: {{ book.isbn.isbn_10 }}<br/>{% endif %}
                 ISBN-13: {{ book.isbn.isbn_13 }}
               </div>
             </div> <!-- .blurbs -->
