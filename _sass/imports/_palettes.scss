@@ -1,0 +1,105 @@
+/**
+ * Palettes
+ */
+.palette-blue {
+  a {
+    border-color: _palette(deep-blue);
+
+    &:hover {
+      border-color: currentColor;
+    }
+  }
+
+  .hollow {
+    background: transparent;
+    border: 2px solid _palette(deep-blue);
+    color: _palette(deep-blue);
+    padding: 0.75714em 35px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: _palette(deep-blue);
+      border-color: _palette(deep-blue);
+      color: #FFFFFF;
+    }
+  }
+
+  button,
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"],
+  .button {
+    background: _palette(deep-blue);
+    border-color: _palette(deep-blue);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: _palette(grass);
+      border-color: _palette(grass);
+      color: #FFFFFF;
+
+      //background: transparent;
+      //border-color: _palette(deep-blue);
+      //box-shadow: 0 0 1px 0.5em rgba(_palette(deep-blue),.2);
+    }
+  }
+
+  .underline {
+    &:after {
+      border-color: _palette(pastel-red);
+    }
+  }
+
+  .profile {
+    .avatar {
+      border-color: _palette(deep-blue);
+      //box-shadow: 0 0 1px 7px rgba(_palette(deep-blue),.2);
+
+      @media only screen and (min-width: 801px) {
+        //box-shadow: 0 0 1px 11px rgba(_palette(deep-blue),.2);
+      }
+    }
+  }
+
+  .social-links {
+    a {
+      &:not(.button) {
+        &:hover {
+          color: _palette(deep-blue);
+        }
+      }
+
+      &.button-icon {
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: _palette(accent-active);
+          border-color: _palette(accent-active);
+          box-shadow: 0 0 1px 5px rgba(_palette(deep-blue), .2);
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .menu-item.current-menu-item,
+  .menu-item :not(.button):hover,
+  .post-title a:hover {
+    color: _palette(accent-active);
+  }
+
+  .site-header.dark {
+    .social-links .button-icon:hover {
+      border-color: _palette(accent-active);
+    }
+
+    .menu-item .button:hover,
+    .menu-item .button:focus,
+    .menu-item .button:active {
+      color: _palette(accent-active);
+    }
+  }
+}

@@ -1,0 +1,66 @@
+---
+layout: body
+use_footer: true
+---
+
+  <article class="post page post-full">
+    <header class="post-header inner-sm">
+        <h1 class="post-title underline">{{ page.title }}</h1>
+      {% if page.header_image %}
+      <div class="ae-page-image">
+          <img src="{{ page.header_image.src | relative_url }}"/>
+      </div>
+      {% endif %}
+      <div class="post-subtitle inner-sm" style="text-align: {{ page.subtitle.align | default: 'center' }}; margin-top: 40px;">
+          {{ page.subtitle.text }} 
+      </div>
+      {% if page.subtitle_button %}
+      <div class="post-subtitle-button inner-sm" style="text-align: center; margin-top: 20px;">
+          <a href="{{ page.subtitle_button.url }}" target="_blank" class="button">{{ page.subtitle_button.text }}</a>
+      </div>
+      {% endif %}
+    </header>
+    <div class="split-images inner-sm">
+        <div class="left-image">
+            <img class="bordered-image" src="{{ page.left_main_img.src }}" title="{{ page.left_main_img.hover_text }}" />
+        </div>
+        <div class="right-image">
+            <img class="bordered-image" src="{{ page.right_main_img.src }}" title="{{ page.right_main_img.hover_text }}" />
+        </div>
+    </div>
+    <div class="bio-content inner-sm">
+        {% for paragraph in page.short_bio %}
+        <p>{{ paragraph }}</p> 
+        {% endfor %}
+        {% if page.author_bio_button %}
+        <div class="author-bio-button" style="text-align: center; margin-top: 20px;">
+            <a href="{{ page.author_bio_button.url }}" target="_blank" class="button">{{ page.author_bio_button.text }}</a>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Second part -->
+    <header class="post-header second-post inner-sm">
+      <h1 class="post-title underline">{{ page.family_album_section_title }}</h1>
+    </header>
+
+  <div class="famphoto-feed inner-sm">
+    <div class="famphoto-feed-inside">
+      {% for photo in page.family_album %}
+      <article class="famphoto famphoto-card">
+        <div class="famphoto-inside">
+          <img class="famphoto-thumbnail" src="{{ photo.img_path | relative_url }}"/>
+          <header class="famphoto-header">
+            <h2 class="famphoto-title">{{ photo.title }}</h2>
+          </header><!-- .famphoto-header -->
+          <div class="famphoto-content">
+            <p>{{ photo.blurb }}</p>
+          </div>
+        </div>
+      </article><!-- .famphoto -->
+      {% endfor %}
+    </div>
+  </div><!-- .famphoto-feed -->
+
+  </article><!-- .post -->
+

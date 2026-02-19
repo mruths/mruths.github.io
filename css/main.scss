@@ -1,0 +1,57 @@
+--- 
+--- 
+// Font.
+$font: (
+  primary: ("Arial", Helvetica, sans-serif),
+  monospace: (Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace)
+);
+
+// Palette.
+$palette: (
+  white: #ffffff,
+  black: #000000,
+  lemon: #ffd654,
+  deep-blue: #003050,
+  deep-blue2: #032A45,
+  light-grey: #f6f6f6,
+  grass: #009762,
+  pastel-red: #fd5f66,
+  lime: #EAF3E2,
+
+  primary: #00ffff,
+  //032A45, //#555e69,
+  secondary: #0000ff,
+  //ffd654, //darken(#555e69, 15%),
+  meta: lighten(#555e69, 25%),
+  //accent-active:      #009762,
+  //accent-inactive:    #003050,
+  border: #009762,
+  //lighten(#555e69, 55%),
+  bg: #f6f6f6,
+  //lighten(#555e69, 60%),
+  accent: #00ff00 //#009762 //#1de2bc,
+  //accent-blue:   #003050, //10bcf9,
+  //accent-violet: #9371e6,
+  //accent-orange: #fc6e51
+);
+
+@import "imports/functions";
+@import "imports/reset";
+@import "imports/general";
+@import "imports/icons";
+@import "imports/animations";
+@import "imports/structure";
+@import "imports/header";
+@import "imports/posts-pages";
+@import "imports/ae-pages";
+@import "imports/ae";
+@import "imports/book-lander";
+@import "imports/sections";
+@import "imports/footer";
+@import "imports/palettes";
+@import "imports/banner";
+@import "imports/about";
+@import "imports/book-feature";
+@import "imports/books-main";
+@import "imports/party-diaries-announcement";
+@import "imports/press";

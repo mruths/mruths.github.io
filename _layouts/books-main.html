@@ -1,0 +1,49 @@
+---
+layout: body
+---
+
+<article class="books-main">
+  {% for series in page.series %}
+  <div class="series-header">
+    <img src="{{ series.image.src }}"
+           {% if series.image.width %}
+           width="{{ series.image.width }}"
+           {% endif %}/>
+  </div>
+  <div class="book-cards">
+    {% for book in series.books %}
+    <div class="book-card">
+      <div class="book-image">
+        <a class="book-wrapping-link" href="{{ book.url }}">
+          <img src="{{ book.image.src }}"/>
+        </a>
+      </div>
+
+      <div class="title"> 
+      {% for line in book.title %}
+          <p>{{ line }}</p>
+      {% endfor %}
+      </div>
+      <div class="action-container">
+        <div class="action">
+            <button onclick="toggleActionMenu('{{ book.id }}ActionDropdown')" class="action-button">
+              <div class="action-button-content">
+                  <div>{{ book.action.title }}</div>
+                  <div><i class="fa fa-chevron-down"></i></div>
+              </div>
+            </button>
+            <div id="{{ book.id }}ActionDropdown" class="action-dropdown-content">
+                {% for item in book.action.items %}
+                <p class="dropdown-category">{{ item.title }}</p>
+                  {% for subitem in item.items %}
+                  <a href="{{ subitem.url }}" class="dropdown-item">{{ subitem.text}}</a>
+                  {% endfor %}
+                {% endfor %}
+            </div> <!-- .action-dropdown-content -->
+        </div> <!-- .action -->
+      </div> <!-- .action-container -->
+    </div> <!-- .book-card -->
+    {% endfor %} <!-- book -->
+  </div> <!-- .book-cards -->
+  {% endfor %} <!-- series -->
+</article>

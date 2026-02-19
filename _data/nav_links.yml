@@ -1,0 +1,39 @@
+menu_items:
+  en:
+    - label: Books
+      url: /en/books
+      subitems:
+      - label: Archie Celebrates
+        url: /en/books-ac
+      - label: The Inside Scouts
+        url: /en/books-is
+      - label: The Party Diaries
+        url: /en/books-pd
+    - label: About
+      url: /en/about
+    - label: Events
+      url: /en/events
+    - label: Press
+      url: /en/press
+    - label: Contact
+      url: /en/contact
+    - label: IG
+      url: https://www.instagram.com/mitaliruths
+      new_window: true
+  fr:
+    - label: Livres
+      url: /fr/books
+      subitems:
+      - label: Les mini-docs
+        url: /fr/books-is
+      - label: Les fêtes de Priya
+        url: /fr/books-pd
+    - label: À propos
+      url: /fr/about
+    - label: Événements
+      url: /fr/events
+    - label: Contact
+      url: /fr/contact
+    - label: Instagram
+      url: https://www.instagram.com/mitaliruths
+      new_window: true

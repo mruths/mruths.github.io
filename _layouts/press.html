@@ -1,0 +1,66 @@
+---
+layout: body
+use_footer: true
+---
+
+  <article class="post page post-full">
+    {% assign nav_language = page.collection | default: site.language_default %}
+    <header class="ae-page-header inner-sm">
+      <h1 class="ae-page-title underline">{{ page.title.text }}</h1>
+      <!-- <img class="ae-page-image" src="{{ page.opening_image | relative_url }}"/> -->
+    </header>
+
+
+    <div class="ae-page-content inner-sm">
+        <!--
+        <div class="ae-page-text ae-page-element">
+            {{ page.opening_text }}
+        </div>
+        -->
+
+        <!--
+        <div class="ae-page-button ae-page-element">
+          <form action="/{{ nav_language }}/contact" method="get" target="_blank">
+            <button type="submit">{{ page.contact_button_text }}</button>
+          </form>
+        </div>
+        -->
+
+        <!--
+        <div class="ae-page-element">
+          <div class="ae-page-subheader inner-sm">
+              {{ section.title }}
+          </div>
+        </div>
+
+        <div class="ae-page-text ae-page-element">
+            {{ section.text }}
+        </div>
+        -->
+
+        {% for item in site.data.press %}
+       <div class="press-feature">
+        <div class="press-item">
+          <div class="press-details">
+            <div class="press-title">
+              <p>{{ item.media_outlet }}</p>
+              <p>{{ item.headline }}</p>
+            </div> <!-- .press-title -->
+            <div class="press-blurbs">
+              <div class="main">{{ item.blurb }}</div>
+            </div> <!-- .press-blurbs -->
+            <div class="press-button">
+              <form action="{{ item.link }}" method="get" target="_blank">
+                <button type="submit">Learn more</button>
+              </form>
+            </div> <!-- .press-button -->
+          </div> <!-- .press-details -->
+        </div> <!-- .press-item --> 
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+  </article><!-- .post -->
+

@@ -1,0 +1,97 @@
+---
+layout: body
+---
+
+<article class="book-feature">
+  <div class="book-highlight">
+    <div class="details">
+      <div class="title">
+        {{ page.highlight.title }}
+      </div>
+          <div class="quotes">
+            {% for quote in page.highlight.quotes %}
+              <div class="quote">
+                <div class="text"> 
+                &ldquo;{{ quote.text }}&rdquo;
+                </div>
+                <div class="source">
+                &ndash; {{ quote.source }}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+      <div class="action">
+          <button onclick="toggleActionMenu('highlightActionDropdown')" class="action-button">
+            <div class="action-button-content">
+                <div>{{ page.highlight.action.title }}</div>
+                <div><i class="fa fa-chevron-down"></i></div>
+            </div>
+          </button>
+        <div id="highlightActionDropdown" class="action-dropdown-content">
+            {% for item in page.highlight.action.items %}
+            <p class="dropdown-category">{{ item.title }}</p>
+              {% for subitem in item.items %}
+              <a href="{{ subitem.url }}" class="dropdown-item">{{ subitem.text}}</a>
+              {% endfor %}
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="highlight-image">
+      <img src="{{ page.highlight.image }}"/>
+    </div>
+  </div>
+  <div class="action-cards">
+    {% for action_card in page.action_cards %}
+    <a class="action-card-link-wrapper" href="{{ action_card.button.url }}" target="_blank">
+      <div class="action-card">
+        <!-- title -->
+        <div class="title"> 
+        {{ action_card.title }}
+        </div>
+        <!-- blurb -->
+        <div class="blurb"> 
+        {{ action_card.blurb }}
+        </div>
+        <!-- Button -->
+        <div class="action-button">
+        <form action="{{ action_card.button.url }}" method="get" target="_blank">
+            <button class="action-button-content" type="submit">
+                <div class="text">{{ action_card.button.text }}</div>
+                <div><i class="fa fa-long-arrow-right"></i></div>
+        </form>
+        </div>
+      </div>
+      </a>
+    {% endfor %}
+  </div>
+  <div class="followup-footer">
+    <div class="followup-image">
+      <img src="{{ page.followup.image }}"/>
+    </div>
+    <div class="followup-details">
+      <div class="title">
+        {{ page.followup.title }}
+      </div>
+      <div class="blurb">
+        {{ page.followup.blurb }}
+      </div>
+      <div class="action">
+         <button onclick="toggleActionMenu('followupActionDropdown')" class="action-button">
+           <div class="action-button-content">
+               <div>{{ page.followup.action.title }}</div>
+               <div><i class="fa fa-chevron-down"></i></div>
+           </div>
+         </button>
+       <div id="followupActionDropdown" class="action-dropdown-content">
+           {% for item in page.followup.action.items %}
+           <p class="dropdown-category">{{ item.title }}</p>
+             {% for subitem in item.items %}
+             <a href="{{ subitem.url }}" class="dropdown-item">{{ subitem.text}}</a>
+             {% endfor %}
+           {% endfor %}
+        </div>
+      </div>
+    </div>   
+  </div>
+</article>

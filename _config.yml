@@ -1,0 +1,75 @@
+title: Mitali Ruths
+
+language_default: en
+
+domain: 'http://www.mitaliruths.com'
+url: 'http://www.mitaliruths.com'
+#baseurl: /
+permalink: '/:title/'
+collections_dir: content
+collections:
+  posts:
+    permalink: '/posts/:title/'
+  en:
+    output: true
+    permalink: '/:collection/:title'
+  fr:
+    output: true
+    permalink: '/:collection/:title'
+layout_style: overflow
+palette: blue
+header:
+  title: Mitali Ruths
+  tagline: Three Book Deal Author!
+  profile_img: images/logomark_bw.png
+  profile_img_alt: Author avatar
+  background: light
+  has_nav: true
+  # Nav links are now found in data/nav_links.yml
+
+  has_social: false
+  # Keeping this around for examples
+  # should we ever want to add these
+  # in again.
+  social_links:
+    - label: Instagram
+      url: 'https://www.instagram.com/'
+      style: icon
+      icon_class: instagram
+      new_window: true
+    - label: GitHub
+      url: 'https://github.com/'
+      style: icon
+      icon_class: github
+      new_window: true
+footer:
+  content: >-
+    &copy; Stackbit. All rights reserved. This Jamstack site was created with <a
+    href="https://www.stackbit.com/?utm_source=deployed-footer" target="_blank"
+    rel="noopener">Stackbit</a>. Create yours <a
+    href="https://app.stackbit.com/create?theme=fresh&utm_source=deployed-footer"
+    target="_blank" rel="noopener">now</a>
+sass:
+  indentWidth: 4
+  style: nested
+  precision: 10
+plugins:
+  - jekyll-menus
+  - jekyll-redirect-from
+exclude:
+  - publish.sh
+  - .publish_ignore
+  - Makefile
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - LICENSE.md
+  - README.md
+  - netlify.toml
+  - stackbit-build.sh
+  - stackbit-pull.js
+

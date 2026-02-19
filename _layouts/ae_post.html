@@ -1,0 +1,264 @@
+---
+layout: body
+---
+
+  <!-- Load books data -->
+  <article class="ae-page ae-page-full">
+    <!-- Get the language of the page -->
+    {% assign nav_language = page.collection | default: site.language_default %}
+    {% if page.title %}
+    <header class="ae-page-header inner-sm">
+      {% if page.title.text %}
+      <h1 class="ae-page-title underline">{{ page.title.text }}</h1>
+      {% endif %}
+      {% if page.title.image %}
+      <div class="ae-page-image"{% if page.title.image.max_width %} style="max-width: {{ page.title.image.max_width }}"{% endif %}>
+          <img src="{{ page.title.image.src | relative_url }}"/>
+          <!-- alt="{{ page.content_img_alt }}" /> -->
+      </div>
+      {% endif %}
+    </header>
+    {% endif %}
+
+    <div class="ae-page-content inner-sm">
+      {% for element in page.content_elements %}
+        {% if element contains "header" %}
+            <header class="ae-page-header inner-sm">
+              <h1 class="ae-page-title underline">{{ element.header }}</h1>
+            </header>
+        {% elsif element contains "anchor" %}
+            <div id="{{ element.anchor }}"></div>
+        {% elsif element contains "subheader" %}
+            <div class="{% if element.subheader.justify == "center" -%}ae-center-text {% endif %}ae-page-subheader ae-page-element">
+              {% if element.subheader.first %}
+                {{ element.subheader.text }}
+              {% else %}
+                {{ element.subheader }}
+              {% endif %}
+            </div>
+        {% elsif element contains "callout" %}
+            <div class="ae-page-callout ae-page-element">
+                {{ element.callout }}
+            </div>
+        {% elsif element contains "text" %}
+            <div class="{% if element.text.justify == "center" -%}ae-center-text {% endif %}ae-page-text ae-page-element">
+                {% if element.text.first %}
+                  {{ element.text.text }}
+                {% else %}
+                  {{ element.text }}
+                {% endif %}
+            </div>
+        {% elsif element contains "list" %}
+            <ul class="ae-page-list ae-page-element">
+                {% for item in element.list %}
+                    <li> {{ item }} </li>
+                {% endfor %}
+            </ul>
+        {% elsif element contains "image" %}
+            <div class="ae-page-image ae-page-element"
+                {% if element.image.align %}
+                style="text-align: center"
+                {% endif %}  
+            >
+                <img src="{{ element.image.src | relative_url }}"
+                  {% if element.image.width %}
+                  style="width: {{ element.image.width }}"
+                  {% endif %}  
+                />
+            </div>
+        {% elsif element contains "button" %}
+            <div class="ae-page-button ae-page-element" 
+              {% if element.button.width %}
+              style="width: {{ element.button.width }}"
+              {% endif %}  
+            >
+            <form action="{{ element.button.url }}" method="get" target="_blank" {% if element.button.justify == "center" %}style="text-align: center"{% endif %}>
+            <button type="submit"
+              {% if element.button.style == "hollow" %}
+              class="hollow"
+              {% endif %}
+              {% if element.button.width %}
+              style="width: {{ element.button.width }}"
+              {% endif %}  
+            >{{ element.button.text }}</button>
+            </form>
+            </div>
+        {% elsif element contains "book_feature" %}
+        {% assign book_id = element.book_feature.book_id %}
+        {% assign book = site.data.books[element.book_feature.book_id] %}
+        <div class="pd-feature" id="{{ book_id }}">
+        <div class="book">
+          <div class="cover-container">
+            <img class="cover" src="{{ book.cover_image_src[nav_language] }}"/>
+          </div>
+          <div class="book-details">
+            <div class="title">
+              {% if book.series_order %}
+              <p>{% if nav_language == "fr" %}No. {{ book.series_order }}{% else %}# {{ book.series_order }}{% endif %} {{ book.series_title[nav_language] }}</p>
+              {% endif %}
+              <p>{{ book.title[nav_language] }}</p>
+            </div> <!-- .title -->
+            <div class="blurbs">
+              <div class="main"> {{ book.blurbs.main[nav_language] }}</div>
+              <div class="details"> 
+                <p>{{ book.blurbs.details[nav_language] }}</p>
+                Release Date: {{ book.release_date[nav_language] }}<br/>
+                ISBN-10: {{ book.isbn.isbn_10 }}<br/>
+                ISBN-13: {{ book.isbn.isbn_13 }}
+              </div>
+            </div> <!-- .blurbs -->
+            <div class="action-container">
+              <div class="action">
+                  <button onclick="toggleActionMenu('{{ book_id }}ActionDropdown')" class="action-button">
+                    <div class="action-button-content">
+                        {% assign book_action = book.action[nav_language] %}
+                        {% assign msg_lookup = site.data.site_text.book_actions[book_action] %}
+                        {% assign msg = msg_lookup[nav_language] %}
+                        <div>{{ msg }}</div>
+                        <div><i class="fa fa-chevron-down"></i></div>
+                    </div>
+                  </button>
+                  <div id="{{ book_id }}ActionDropdown" class="action-dropdown-content">
+                      {% for item in book.action_links[nav_language] %}
+                      <p class="dropdown-category">{{ item.title }}</p>
+                        {% for subitem in item.items %}
+                        <a href="{{ subitem.url }}" target="_blank" class="dropdown-item">{{ subitem.text}}</a>
+                        {% endfor %}
+                      {% endfor %}
+                  </div> <!-- .action-dropdown-content -->
+              </div> <!-- .action -->
+            </div> <!-- .action-container -->
+          </div> <!-- .book-details -->
+        </div> <!-- .book --> 
+        </div>
+        {% elsif element contains "image_cards" %}
+          <div class="ae-page-feed ae-page-element">
+            {% for card in element.image_cards %}
+            <article class="ae-page-card"
+            {% if card contains "card_pct_size" %}
+            style="flex-basis: {{ card.card_pct_size }}%" 
+            {% elsif element.card_pct_size %}
+            style="flex-basis: {{ element.card_pct_size }}%" 
+            {% endif %}
+            >
+    
+            <div class="ae-page-card-inside">
+              {% if card contains "image" %}
+              <a 
+                  {% if card contains open_urls_in_new_tab %}
+                  target="_blank" 
+                  {% endif %}
+                  href="{{ card.url }}">
+                <div class="ae-card-thumbnail ae-card-component">
+                  <img src="{{ card.image.src | relative_url }}"/>
+                </div>
+              </a>
+              {% endif %}
+              {% if card contains "content" %}
+                {% for ce in card.content %}
+                  {% if ce contains "title" %}
+                    <div class="
+                      {%- if ce.title contains "style" -%}
+                        {%- if ce.title.style == "header" -%} 
+                          ae-title-header
+                        {%- elsif ce.title.style == "regular" -%}
+                          ae-title
+                        {%- endif %}
+                      {%- else -%}
+                        ae-title
+                      {%- endif -%}
+                      {%- if ce.title contains "justify" -%}
+                        {%- if ce.title.justify == "center" %} ae-center-text
+                        {%- endif -%}
+                      {%- endif %} ae-card-component">
+                      {{ ce.title.text }}
+                    </div><!-- .famphoto-header -->
+                  {% elsif ce contains "text" %}
+                    <div class="{% if ce.text.justify == "center" -%}ae-center-text {% endif %}ae-blurb ae-card-component">
+                      {% if ce.text.first %}
+                        {{ ce.text.text }}
+                      {% else %}
+                        {{ ce.text }}
+                      {% endif %}
+                    </div><!-- .famphoto-header -->
+                  {% elsif ce contains "button" %}
+                    <div class="ae-page-button ae-card-component">
+                      <form action="{{ ce.button.url }}" method="get" target="_blank">
+                      <button type="submit">{{ ce.button.text }}</button>
+                      </form>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            </div>
+            </a>
+          </article><!-- .famphoto -->
+          {% endfor %}
+          </div>
+        {% elsif element contains "book_cards" %}
+          <div class="book-cards">
+          {% for be in element.book_cards %}
+          {% if be.image %}
+          <div class="book-card {% if be.column_size == 2 %}double{% endif %}">
+            <div class="book-image">
+              <img class="no-shadow" 
+                    style="{% if be.image.max_width %}max-width: {{ be.image.max_width }}; {% endif %}{% if be.image.height %}height: {{ be.image.height }}; {% endif %}"
+                    src="{{ be.image.src}}"/>
+            </div>
+          </div>
+          {% else %}
+          {% assign book = site.data.books[be.book_id] %}
+          <div class="book-card">
+            {% unless be.hide_image %}
+            <div class="book-image">
+              <a class="book-wrapping-link" href="/{{ nav_language }}/books-{{be.book_id | truncate: 2, ""}}#{{ be.book_id }}">
+                <img src="{{ book.cover_image_src[nav_language] }}"/>
+              </a>
+            </div>
+            {% endunless %}
+          
+            {% unless be.hide_content %}
+            <div class="title"> 
+              <p>
+                {% if book.series_order %}
+                {% if nav_language == "fr" %}No. {{ book.series_order }}{% else %}# {{ book.series_order }}{% endif %}
+                {% endif %}
+                {{ book.series_title[nav_language] }}</p>
+              <p>{{ book.title[nav_language] }}</p>
+            </div>
+            {% endunless %}
+            <div class="action-container">
+              <div class="action">
+                  <button onclick="toggleActionMenu('{{ element.card_set_id }}{{ be.book_id }}ActionDropdown')" class="action-button">
+                    <div class="action-button-content">
+                        {% assign book_action = book.action[nav_language] %}
+                        {% assign msg_lookup = site.data.site_text.book_actions[book_action] %}
+                        {% assign msg = msg_lookup[nav_language] %}
+                        <div>{{ msg }}</div>
+                        <div><i class="fa fa-chevron-down"></i></div>
+                    </div>
+                  </button>
+                  <div id="{{ element.card_set_id }}{{ be.book_id }}ActionDropdown" class="action-dropdown-content">
+                      {% for item in book.action_links[nav_language] %}
+                      <p class="dropdown-category">{{ item.title }}</p>
+                        {% for subitem in item.items %}
+                        <a href="{{ subitem.url }}" class="dropdown-item">{{ subitem.text}}</a>
+                        {% endfor %}
+                      {% endfor %}
+                  </div> <!-- .action-dropdown-content -->
+              </div> <!-- .action -->
+            </div> <!-- .action-container -->
+          </div> <!-- .book-card -->
+          {% endif %}
+          {% endfor %} <!-- book -->
+          </div> <!-- .book-cards -->
+        {% endif %}
+      {% endfor %}
+    </div>
+    <!--
+    <footer class="ae-page-meta inner-sm">
+      <time class="published"
+        datetime="{{ page.date | date: '%Y-%m-%d %H:%M' }}">{{ page.date | date: '%A, %B %e, %Y' }}</time>
+    </footer>
+    -->
+  </article><!-- .ae-page -->

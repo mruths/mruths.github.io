@@ -1,0 +1,262 @@
+/**
+ * Book landing Pages
+ */
+
+.book-landing {
+  margin-bottom: 3.33333em;
+  position: relative;
+}
+
+/* Feed */
+.lander-feed-inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  //margin: 0 -0.83333em 1.66667em;
+}
+
+.lander-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 40px; //1.66667em;
+
+  a {
+    border: none;
+    color: inherit;
+  }
+
+  .lander-card-inside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin-left: 0.83333em;
+    margin-right: 0.83333em;
+    overflow: hidden;
+  }
+}
+
+.center {
+  justify-content: center;
+}
+
+.lower-card {
+
+  .testimonial {
+    font-size: 14px;
+
+    .flourish {
+      text-align: center;
+    }
+
+    img {
+      height: 3em;
+    }
+
+    p {
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+    }
+  
+    .source {
+      text-align: right;
+    }
+  
+    form {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+
+  .image {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.left-lander-card {
+  -ms-flex: 0 0 54%;
+  flex: 0 0 54%;
+  margin-right: 1%;
+  width: 54%;
+}
+
+.left-buy-form {
+  text-align: right;
+}
+
+.right-buy-form {
+  text-align: left;
+}
+
+
+.right-lander-card {
+  -ms-flex: 0 0 44%;
+  flex: 0 0 44%;
+  margin-right: 1%;
+  width: 44%;
+}
+
+
+.book-details {
+
+  .book-text {
+    //width: 100%;
+
+    .book-header {
+      margin-bottom: 1.66667em;
+      color: _palette(deep-blue);
+
+      .book-lead {
+        //font-size: 2.66667em;
+        //font-size: 2.0em;
+        font-size: 1.5em;
+        //margin: 0 0 1.66667rem;
+        margin-bottom: 0.5em;
+        color: _palette(deep-blue);
+      
+        padding-bottom: 0.5em;
+        border-bottom: 3px solid _palette(pastel-red);
+      
+        a {
+          border: 0;
+          color: inherit;
+      
+          &:hover {
+            color: _palette(grass);
+          }
+        }
+      }
+
+      .book-blurb {
+        font-size: 1.0em;
+        font-weight: bold;
+        line-height: 1.5;
+        color: _palette(grass);
+      }
+    }
+  }
+
+  .book-cover {
+    //padding-right: 5%;
+
+    img {
+        width: 100%;
+    }
+  }
+
+  .book-summary {
+    font-size: 14px;
+    line-height: 1.5;
+    color: _palette(deep-blue);
+
+    p {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .book-release-date {
+    font-size: 1.0em;
+    font-weight: bold;
+    line-height: 1.5;
+    color: _palette(pastel-red);
+
+    p {
+      margin-bottom: 0em;
+    }
+  }
+
+  .buy-buttons {
+    
+    button {
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+
+      font-size: 16px;
+
+      margin-top: 20px;
+      width: 100%;
+
+      background-color: _palette(deep-blue2);
+    }
+  }
+
+  img {
+    border: 1px solid _palette(deep-blue2);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .book-title {
+    font-size: 2.22222em;
+  }
+
+  .book-subtitle {
+    font-size: 1.22222em;
+  }
+
+  .book-feed-inside {
+    margin-left: -1.5vw;
+    margin-right: -1.5vw;
+  }
+
+  .book-card {
+    margin-bottom: 3vw;
+
+    .book-inside {
+      margin-left: 1.5vw;
+      margin-right: 1.5vw;
+    }
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1000px), only screen and (max-width: 600px) {
+
+  .book-details {
+    .buy-buttons {
+      button {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .left-lander-card {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-right: 0%;
+    width: 100%;
+  }
+  
+  .right-lander-card {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-right: 0%;
+    width: 100%;
+  }
+
+  .left-buy-form {
+    text-align: center;
+  }
+  
+  .right-buy-form {
+    text-align: center;
+  }
+
+}

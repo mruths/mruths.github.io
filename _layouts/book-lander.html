@@ -1,0 +1,98 @@
+---
+layout: body
+---
+
+<article class="book-landing">
+  <div class="lander-feed inner-sm">
+    <div class="lander-feed-inside">
+      <!-- first the main cards -->
+      <article class="lander-card left-lander-card book-cover">
+        <div class="lander-card-inside">
+          <img src="{{ page.main_content.cover_image }}"/>
+        </div>
+      </article>
+      <article class="lander-card right-lander-card book-details">
+        <div class="lander-card-inside book-text">
+        <header class="book-header">
+          <h1 class="book-lead">{{ page.main_content.lead }}</h1>
+          <div class="book-blurb">
+              {{ page.main_content.blurb }}
+          </div>
+        </header><!-- .post-header -->
+        
+        <div class="book-summary">
+          {{ page.main_content.summary }}
+        </div>
+
+        {% if page.main_content.release_date %}
+        <div class="book-release-date">
+          <p>
+          Release date {{ page.main_content.release_date }}
+          </p>
+        </div>
+        {% endif %}
+
+        </div>
+      </article>
+
+      {% assign cards_len = page.main_content.buy_buttons.size | minus: 1 %}
+      {% for idx in (0..cards_len) %}
+        {% assign remainder = idx | modulo: 2 %}
+        {% if remainder == 0 %}
+        <article class="lander-card left-lander-card">
+        {% else %}
+        <article class="lander-card right-lander-card">
+        {% endif %}
+
+          <div class="lander-card-inside center">
+            {% assign card = page.main_content.buy_buttons[idx] %}
+            
+            {% if remainder == 0 %}
+            <form class="left-buy-form" action="{{ card.url }}" method="get" target="_blank">
+            {% else %}
+            <form class="right-buy-form" action="{{ card.url }}" method="get" target="_blank">
+            {% endif %}
+            <button type="submit">{{ card.text }}</button>
+            </form>
+          </div>
+        </article>
+      {% endfor %}
+
+      <!-- all the lower cards -->
+      {% assign cards_len = page.lower_cards.size | minus: 1 %}
+      {% for idx in (0..cards_len) %}
+        {% assign remainder = idx | modulo: 2 %}
+        {% if remainder == 0 %}
+        <article class="lander-card left-lander-card lower-card">
+        {% else %}
+        <article class="lander-card right-lander-card lower-card">
+        {% endif %}
+
+          <div class="lander-card-inside center">
+            {% assign card = page.lower_cards[idx] %}
+            
+            {% if card.testimonial %}
+            <div class="testimonial">
+              <div class="flourish">
+                <img src="images/Diya.png"</img>
+              </div>
+            <p>{{ card.testimonial.quote }}</p> 
+            <p class="source">&#8212; {{ card.testimonial.source }}</p>
+
+              {% if card.testimonial.button %}
+              <form action="{{ card.testimonial.button.url }}" method="get" target="_blank">
+              <button type="submit">{{ card.testimonial.button.text }}</button>
+              </form>
+              {% endif %}
+            </div>
+            {% elsif card.image %}
+            <div class="image">
+              <img src="{{ card.image.src }}"/>
+            </div>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</article>

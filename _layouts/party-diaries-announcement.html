@@ -1,0 +1,68 @@
+---
+layout: body
+---
+
+<article class="pd-feature">
+  <div class="pd-lead">
+    <div class="opener">
+      <img src="{{ page.lead.lead_image.src }}"
+           {% if page.lead.lead_image.width %}
+           width="{{ page.lead.lead_image.width }}"
+           {% endif %}/>
+      <div class="title">{{ page.lead.title }}</div>
+      <div class="subtitle">
+          {% for line in page.lead.subtitle %}
+          <p>{{ line }}</p> 
+          {% endfor %}
+      </div>
+    </div> <!-- .opener -->
+    <!--
+    <div class="pd-lead-covers">
+    {% for book in page.books %}
+      <img src="{{ book.lead_image.src }}"/>
+    {% endfor %}
+    </div> 
+    <div class="blurbs">
+      {{ page.lead.blurb }}
+    </div> -->
+  </div> <!-- .pd-lead -->
+  {% for book in page.books %}
+  <div class="book">
+      <div class="cover-container">
+        <img class="cover" src="{{ book.section_image.src }}"/>
+      </div>
+      <div class="book-details">
+        <div class="title">
+          {% for line in book.title %}
+              <p>{{ line }}</p>
+          {% endfor %}
+        </div> <!-- .title -->
+        <div class="blurbs">
+          <div class="main"> {{ book.blurbs.main }}</div>
+          <div class="details"> {{ book.blurbs.details }}</div>
+        </div> <!-- .blurbs -->
+        <div class="action-container">
+          <div class="action">
+              <button onclick="toggleActionMenu('{{ book.id }}ActionDropdown')" class="action-button">
+                <div class="action-button-content">
+                    <div>{{ book.action.title }}</div>
+                    <div><i class="fa fa-chevron-down"></i></div>
+                </div>
+              </button>
+              <div id="{{ book.id }}ActionDropdown" class="action-dropdown-content">
+                  {% for item in book.action.items %}
+                  <p class="dropdown-category">{{ item.title }}</p>
+                    {% for subitem in item.items %}
+                    <a href="{{ subitem.url }}" class="dropdown-item">{{ subitem.text}}</a>
+                    {% endfor %}
+                  {% endfor %}
+              </div> <!-- .action-dropdown-content -->
+          </div> <!-- .action -->
+        </div> <!-- .action-container -->
+      </div> <!-- .book-details -->
+  </div> <!-- .book -->
+  {% endfor %}
+  <div class="closer">
+    {{ page.closer.text }}
+  </div>
+</article>

@@ -1,0 +1,83 @@
+<header id="masthead" class="site-header {{ site.header.background }}">
+  <div class="site-header-wrap">
+    <div class="site-header-inside">
+
+      <div class="site-branding">
+        {% assign nav_language = page.collection | default: site.language_default %}
+        {% assign profile_img_is_not_empty = site.header.profile_img | is_not_empty %}
+        {% if profile_img_is_not_empty %}
+        <p class="profile">
+          <a href="/{{ nav_language }}/index"><img src="{{ site.header.profile_img | relative_url }}"
+              class="avatar" alt="{{ site.header.profile_img_alt }}" /></a>
+        </p><!-- .profile -->
+        {% endif %}
+      </div><!-- .site-branding -->
+
+        {% if site.header.has_nav %}
+        <button id="menu-toggle" class="menu-toggle"><span class="screen-reader-text">Menu</span><span class="icon-menu"
+            aria-hidden="true"></span></button>
+        {% endif %}
+
+      {% if site.header.has_nav %}
+      <nav id="main-navigation" class="site-navigation" aria-label="Main Navigation">
+        <div class="site-nav-wrap">
+          <div class="site-nav-inside">
+
+            <ul class="menu">
+              {% assign menu_items = site.data.nav_links.menu_items.[nav_language] %}
+              <!--
+              {% unless menu_items %}
+                {% assign menu_items = site.data.nav_links.menu_items.[site.language_default] %}
+              {% endunless %}
+              -->
+              {% for action in menu_items %}
+                {% assign pageUrl = page.url | trim: '/' %}
+                {% assign actionUrl = action.url | trim: '/' %}
+                {% assign new_window_is_not_empty = action.new_window | is_not_empty %}
+                <li class="menu-option menu-item{% if action.style == 'button' %} menu-button{% endif %}{% if action.subitems %} dropbtn{% endif %}">
+                  <a href="{{ action.url | relative_url }}"
+                    {% assign new_window_is_not_empty = action.new_window | is_not_empty %}{% if new_window_is_not_empty %} target="_blank"{% endif %}
+                    {% if action.new_window or action.no_follow %} rel="{% if new_window_is_not_empty %}noopener {% endif %}{% assign no_follow_is_not_empty = action.no_follow | is_not_empty %}{% if no_follow_is_not_empty %}nofollow{% endif %}"{% endif %}
+                    class="{% if action.style == 'button' %}button {% endif %}{% if pageUrl == actionUrl %} current-menu-item{% endif %}">{{ action.label }}</a>
+                      {% if action.subitems %}
+                      <div class="dropdown-content">
+                        {% for subitem in action.subitems %}
+                        <a href="{{ subitem.url | relative_url }}"
+                          {% if subitem.new_window %} target="_blank"
+                          rel="noopener"{% endif %}>{{ subitem.label }}</a>
+                        {% endfor %}
+                      </div>
+                      {% endif %}
+                </li>
+              {% endfor %}
+                <li class="menu-option lang-item">
+                  {% if page.collection == "en" %}
+                    {% if page.lang_switch and page.lang_switch.fr %}
+                      {% assign lang_url = page.lang_switch.fr.url %}
+                    {% else %}
+                      {% assign lang_url = "/fr/" | append: page.slug %}
+                    {% endif %}
+                  <a href="{{ lang_url }}">
+                    fr
+                  </a>
+                  {% else %}
+                    {% if page.lang_switch and page.lang_switch.en %}
+                      {% assign lang_url = page.lang_switch.en.url %}
+                    {% else %}
+                      {% assign lang_url = "/en/" | append: page.slug %}
+                    {% endif %}
+
+                  <a href="{{ lang_url }}">
+                    en 
+                  </a>
+                  {% endif %}
+                </li>
+            </ul><!-- .menu -->
+          </div><!-- .site-nav-inside -->
+        </div><!-- .site-nav-wrap -->
+      </nav><!-- .site-navigation -->
+      {% endif %}
+
+    </div><!-- .site-header-inside -->
+  </div><!-- .site-header-wrap -->
+</header><!-- .site-header -->

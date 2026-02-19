@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>    
+
+        <!-- <title>{% assign title_is_not_empty = page.seo.title | is_not_empty %}{% if title_is_not_empty %}{{ page.seo.title }}{% else %}{{ page.title | append: ' | ' | append: site.title }}{% endif %}</title> -->
+        <title>{% assign title_is_not_empty = page.seo.title | is_not_empty %}{% if title_is_not_empty %}{{ page.seo.title }}{% else %}{{ site.title }}{% endif %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="google" content="notranslate" />
+        <meta name="description" content="{{ page.seo.description | default: '' }}" />
+        {% assign robots_is_not_empty = page.seo.robots | is_not_empty %}
+        {% if robots_is_not_empty %}
+        <meta name="robots" content="{{ page.seo.robots | join: ',' }}">
+        {% endif %}
+        {% for meta in page.seo.extra %}
+          {% assign key_name = meta.keyName | default: 'name' %}
+          {% assign relativeUrl_is_not_empty = meta.relativeUrl | is_not_empty %}
+          {% if relativeUrl_is_not_empty %}
+            {% assign domain_is_not_empty = site.domain | is_not_empty %}
+            {% if domain_is_not_empty %}
+              {% assign domain = site.domain | trim: '/' %}
+              {% assign rel_url = meta.value | relative_url %}
+              {% assign full_url = domain | append: rel_url %}
+              <meta {{ key_name }}="{{ meta.name }}" content="{{ full_url }}">
+            {% endif %}
+          {% else %}
+            <meta {{ key_name }}="{{ meta.name }}" content="{{ meta.value }}">
+          {% endif %}
+        {% endfor %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="{{ 'css/main.css' | relative_url }}">
+        {% assign favicon_is_not_empty = site.favicon | is_not_empty %}
+        {% if favicon_is_not_empty %}
+        <link rel="icon" href="{{ site.favicon | relative_url }}">
+        {% endif %}
+        
+    </head>
+    <body>
+        <div class="center-everything">
+        {{ content }}
+        </div>
+        <script src="{{ 'js/init.js' | relative_url }}"></script>
+        <script src="{{ 'js/page-load.js' | relative_url }}"></script>
+
+        <!-- Code for the action buttons -->
+        <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function toggleActionMenu(dropdownElementId) {
+          document.getElementById(dropdownElementId).classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.action-button')) {
+            var dropdowns = document.getElementsByClassName("action-dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+
+    </body> 
+</html>

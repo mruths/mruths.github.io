@@ -1,0 +1,195 @@
+.bio-content {
+    clear: both;
+    padding-top: 0.8333rem; 
+    font-size: 14px;
+}
+
+.second-post {
+    margin-top: 2em;
+}
+
+/**
+ * About Me page 
+ */
+
+.famphoto {
+  margin-bottom: 3.33333em;
+  position: relative;
+}
+
+.famphoto-header {
+  margin-bottom: 1.66667em;
+}
+
+.famphoto-title {
+  color: _palette(deep-blue);
+  font-size: 1.5em;
+  margin: 0 0 1.66667rem;
+  //border-bottom: 3px solid _palette(pastel-red);
+
+  a {
+    border: 0;
+    color: inherit;
+
+    &:hover {
+      color: _palette(grass);
+    }
+  }
+}
+
+.famphoto-subtitle {
+  color: _palette(grass);
+  font-weight: bold;
+  font-size: 1.0em;
+  line-height: 1.5;
+}
+
+.famphoto-image {
+  margin-bottom: 1.66667em;
+
+  img {
+    width: 100%;
+  }
+}
+
+.famphoto-meta {
+  color: _palette(meta);
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin-bottom: 1.66667rem;
+  text-transform: uppercase;
+}
+
+/* Post feed */
+.famphoto-feed-inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -0.83333em 1.66667em;
+}
+
+.split-images {
+    .left-image {
+        width: 48%;
+        padding-right: 2%;
+        float: left;
+    }
+
+    .right-image {
+        width: 48%;
+        padding-left: 2%;
+        float: right;
+    }
+
+    .bordered-image {
+        border: 2px solid _palette(pastel-red);
+    }
+}
+
+.famphoto-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 1.66667em;
+  width: 25%;
+
+  .famphoto-inside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin-left: 0.83333em;
+    margin-right: 0.83333em;
+    overflow: hidden;
+  }
+
+  .famphoto-thumbnail {
+    border: 2px solid _palette(pastel-red);
+    display: block;
+    margin: 0;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 66.666%;
+    }
+  }
+
+  .famphoto-header {
+    //margin-bottom: 0.83333rem;
+    margin-bottom: 0rem;
+    //padding: 1.33333rem 1.33333rem 0;
+    padding: 0.5rem 0rem 0;
+  }
+
+  .famphoto-title {
+    color: _palette(pastel-red);
+    font-size: 0.9em; //1.33333em;
+    margin: 0;
+    padding-bottom: 0.83333rem;
+  }
+
+  .famphoto-content {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 0;
+    font-size: 12px;
+  }
+
+  .famphoto-meta {
+    margin: 0;
+    padding: 0 1.33333rem 1.33333rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .famphoto-title {
+    //font-size: 2.22222em;
+    font-size: 1.5em;
+  }
+
+  .famphoto-subtitle {
+    font-size: 1.0em;
+  }
+
+  .famphoto-feed-inside {
+    margin-left: -1.5vw;
+    margin-right: -1.5vw;
+  }
+
+  .famphoto-card {
+    margin-bottom: 3vw;
+
+    .famphoto-inside {
+      margin-left: 1.5vw;
+      margin-right: 1.5vw;
+    }
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1000px), only screen and (max-width: 600px) {
+  .famphoto-card {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    width: 50%;
+  }
+}

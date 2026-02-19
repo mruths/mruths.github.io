@@ -1,0 +1,43 @@
+---
+layout: body
+use_footer: true
+---
+
+<article class="post page post-full">
+    <header class="post-header inner-sm">
+        <h1 class="post-title underline">{{ page.title }}</h1>
+      <div class="post-subtitle inner-sm">
+        {{ page.opening_text }}
+      </div>
+    </header>
+
+
+  <div class="inner-sm">
+    <form class="inner-sm" accept-charset="UTF-8" enctype="multipart/form-data" action="https://getform.io/f/3c9bf53e-d164-452f-80c9-5112f018cfd7" method="POST">
+        <p>
+        <b>{{ page.first_name_text }}</b>
+        <input type="text" name="first_name" placeholder="">
+        </p>
+
+        <p>
+        <b>{{ page.last_name_text }}</b>
+        <input type="text" name="last_name" placeholder="">
+        </p>
+
+        <p>
+        <b>{{ page.email_text }}</b>
+        <input type="email" name="email" placeholder="">
+        </p>
+
+        <p>
+        <b>{{ page.message_text }}</b>
+        <textarea rows="5" name="message"></textarea>
+        </p>
+
+        <input type="hidden" name="utf8" value="✓">
+        <button type="submit">{{ page.send_text }}</button>
+    </form>
+  </div>
+</article>
+
+

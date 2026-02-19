@@ -1,0 +1,12 @@
+{
+    "book_actions": {
+        "buy": {
+            "en": "Buy the book",
+            "fr": "Acheter le livre"
+        },
+        "pre-order": {
+            "en": "Pre-order the book",
+            "fr": "Pré-commande maintenant"
+        }
+    }
+}

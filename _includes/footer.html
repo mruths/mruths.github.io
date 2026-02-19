@@ -1,0 +1,44 @@
+<footer class="site-footer">
+  <div class="site-header-wrap">
+    <div class="site-header-inside">
+      {% if site.header.has_nav %}
+      <nav id="main-navigation" class="site-navigation" aria-label="Main Navigation">
+        <div class="site-nav-wrap">
+          <div class="site-nav-inside">
+
+            <ul class="menu">
+              {% for action in site.header.nav_links %}
+                {% assign pageUrl = page.url | trim: '/' %}
+                {% assign actionUrl = action.url | trim: '/' %}
+                <li class="menu-item{% if pageUrl == actionUrl %} current-menu-item{% endif %}{% if action.style == 'button' %} menu-button{% endif %}">
+                  <a href="{{ action.url | relative_url }}"
+                    {% assign new_window_is_not_empty = action.new_window | is_not_empty %}{% if new_window_is_not_empty %} target="_blank"{% endif %}
+                    {% if action.new_window or action.no_follow %} rel="{% assign new_window_is_not_empty = action.new_window | is_not_empty %}{% if new_window_is_not_empty %}noopener {% endif %}{% assign no_follow_is_not_empty = action.no_follow | is_not_empty %}{% if no_follow_is_not_empty %}nofollow{% endif %}"{% endif %}
+                    {% if action.style == 'button' %}class="button"{% endif %}>{{ action.label }}</a>
+                </li>
+              {% endfor %}
+            </ul><!-- .menu -->
+          </div><!-- .site-nav-inside -->
+        </div><!-- .site-nav-wrap -->
+      </nav><!-- .site-navigation -->
+      {% endif %}
+
+      <div class="site-branding">
+        {% assign profile_img_is_not_empty = site.header.profile_img | is_not_empty %}
+        {% if profile_img_is_not_empty %}
+        <p class="profile">
+          <a href='{{ '/' | relative_url }}'><img src="{{ site.header.profile_img | relative_url }}"
+              class="avatar" alt="{{ site.header.profile_img_alt }}" /></a>
+        </p><!-- .profile -->
+        {% endif %}
+        <!--
+        {% if site.header.has_nav %}
+        <button id="menu-toggle" class="menu-toggle"><span class="screen-reader-text">Menu</span><span class="icon-menu"
+            aria-hidden="true"></span></button>
+        {% endif %}
+        -->
+      </div><!-- .site-branding -->
+
+    </div><!-- .site-header-inside -->
+  </div><!-- .site-header-wrap -->
+</footer><!-- .site-footer -->
