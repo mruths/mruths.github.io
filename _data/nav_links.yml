@@ -4,7 +4,7 @@ menu_items:
       url: /en/books
       subitems:
       - label: Jitty and the Machine
-        url: /en/books-jm
+        url: /en/books-jitty
       - label: The Party Diaries
         url: /en/books-pd
       - label: The Inside Scouts
