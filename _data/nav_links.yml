@@ -3,12 +3,14 @@ menu_items:
     - label: Books
       url: /en/books
       subitems:
-      - label: Archie Celebrates
-        url: /en/books-ac
-      - label: The Inside Scouts
-        url: /en/books-is
+      - label: Jitty and the Machine
+        url: /en/books-jm
       - label: The Party Diaries
         url: /en/books-pd
+      - label: The Inside Scouts
+        url: /en/books-is
+      - label: Archie Celebrates
+        url: /en/books-ac
     - label: About
       url: /en/about
     - label: Events

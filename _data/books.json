@@ -1,4 +1,67 @@
 {
+    "jm1": {
+      "title": {
+        "en": "Jitty and the Machine"
+      },
+      "cover_image_src": {
+        "en": "/images/books_lander/Jitty1_en.jpg"
+      },
+      "blurbs": {
+        "main": {
+          "en": "<i>Artemis Fowl</i> meets <i>City of Ember</i> in this epic and imaginative illustrated steampunk fantasy novel following a clever young inventor in a perilous situation who must find the courage to reengineer her destiny—one gear at a time."
+        },
+        "details": {
+          "en": "Jitty of Slant Jaw Row has always survived by her wits in Clockwork India, scavenging scraps to build clever inventions that keep her family alive. But when her latest creation accidentally knocks out power to the entire city of Calcutta, British officers throw Jitty in jail, where she expects to die.<br/><br/>Yet almost as soon as she arrives, Jitty is visited by the young Duke of Calcutta, who is impressed by her skill with gears. He has a job to offer her: Help finish a powerful machine unlike anything the empire has ever seen.<br/><br/>Whisked into a world of glittering palaces, secret laboratories, and brilliant inventors, Jitty wonders if the duke is telling her the whole truth about his machine—and what will happen to her and her family if she doesn’t complete it."
+        }
+      },
+      "release_date": {
+        "en": "April 27, 2027"
+      },
+      "isbn": {
+        "isbn_10": "",
+        "isbn_13": "979-8347119424"
+      },
+      "action": {
+        "en": "pre-order"
+      },
+      "action_links": {
+        "en": [
+          {
+            "title": "USA",
+            "items": [
+              {
+                "text": "Amazon",
+                "url": "https://www.amazon.com/exec/obidos/ASIN/B0H5DBV96P?tag=simonsayscom"
+              },
+              {
+                "text": "Barnes & Noble",
+                "url": "https://www.barnesandnoble.com/w/jitty-and-the-machine-mitali-banerjee-ruths/1150402168?ean=9798347119424"
+              },
+              {
+                "text": "Books a Million",
+                "url": "https://www.booksamillion.com/p/9798347119424"
+              },
+              {
+                "text": "Bookshop.org",
+                "url": "https://bookshop.org/p/books/jitty-and-the-machine-mitali-banerjee-ruths/3639a81eeee4eb66?ean=9798347119424&affiliate=1688"
+              },
+              {
+                "text": "Hudson Booksellers",
+                "url": "https://hudsonbooksellers.com/book/9798347119424"
+              },
+              {
+                "text": "Target",
+                "url": "https://www.target.com/p/jitty-and-the-machine-by-mitali-banerjee-ruths-hardcover/-/A-1012126803#lnk=sametab"
+              },
+              {
+                "text": "Simon & Schuster",
+                "url": "https://www.simonandschuster.com/books/Jitty-and-the-Machine/Mitali-Banerjee-Ruths/9798347119424"
+              }
+            ]
+          }
+        ]
+      }
+    },
     "ac1": {
       "title": {
         "en": "Archie Celebrates Diwali"
