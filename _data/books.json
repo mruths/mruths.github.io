@@ -359,29 +359,38 @@
     },
     "pd3": {
       "series_title": {
-        "en": "The Party Diaries"
+        "en": "The Party Diaries",
+        "fr": "Les fêtes de Priya"
       },
       "series_order": 3,
       "title": {
-        "en": "Top Secret Anniversary"
+        "en": "Top Secret Anniversary",
+        "fr": "La soirée surprise"
       },
       "cover_image_src": {
-        "en": "/images/books_lander/Party3_en.jpg"
+        "en": "/images/books_lander/Party3_en.jpg",
+        "fr": "/images/books_lander/Party3_fr.jpg"
       },
       "blurbs": {
         "main": {
           "en": "In the third installment of this full-color early chapter book series, Priya plans a top-secret anniversary party and helps save manatees!"
         },
         "details": {
-          "en": "Priya’s mom wants to surprise Priya’s dad with an anniversary party. So Priya gets right to work, making party plans and crafting DIY decorations with help from her best friend Melissa. But Priya finds it hard to keep a secret inside her own house, especially with her dad always being curious about EVERYTHING. Can Priya keep her dad from spoiling the surprise AND make it her parents’ best anniversary ever?"
+          "en": "Priya’s mom wants to surprise Priya’s dad with an anniversary party. So Priya gets right to work, making party plans and crafting DIY decorations with help from her best friend Melissa. But Priya finds it hard to keep a secret inside her own house, especially with her dad always being curious about EVERYTHING. Can Priya keep her dad from spoiling the surprise AND make it her parents’ best anniversary ever?",
+          "fr": "La mère de Priya veut surprendre le père de Priya en organisant une fête pour leur anniversaire. Priya se met donc au travail, organisant la fête et fabriquant des décorations avec l’aide de sa meilleure amie Mélissa. Mais Priya a du mal à garder le secret dans sa propre maison, surtout que son père veut toujours TOUT savoir. Priya pourra-t-elle empêcher son père de découvrir la surprise ET faire en sorte que ce soit le plus bel anniversaire de mariage que ses parents aient jamais fêté?"
         }
       },
       "release_date": {
-        "en": "October 31, 2023"
+        "en": "October 31, 2023",
+        "fr": "7 octobre 2025"
       },
       "isbn": {
         "isbn_10": "1338799908",
-        "isbn_13": "978-1338799903"
+        "isbn_13": "978-1338799903",
+        "fr": {
+          "isbn_10": "1039713726",
+          "isbn_13": "978-1039713727"
+        }
       },
       "action": {
         "en": "buy",
@@ -409,9 +418,28 @@
           {
             "title": "International",
             "items": [
-              { 
+              {
                 "text": "Canada - Amazon",
                 "url": "https://www.amazon.ca/Top-Secret-Anniversary-Branches-Diaries/dp/1338799908/ref=sr_1_1?crid=17SWFZQ0OSSOM&keywords=top+secret+anniversary&qid=1676046498&sprefix=top+secret+anniversary%2Caps%2C91&sr=8-1"
+              }
+            ]
+          }
+        ],
+        "fr": [
+          {
+            "title": "Canada",
+            "items": [
+              {
+                "text": "Amazon",
+                "url": "https://www.amazon.ca/f%C3%AAtes-Priya-N%CB%9A-soir%C3%A9e-surprise/dp/1039713726/"
+              },
+              {
+                "text": "Renaud-Bray",
+                "url": "https://www.renaud-bray.com/Livres_Produit.aspx?id=4476057&def=Soir%c3%a9e+surprise(La)+%2303%2cRUTHS%2c+MITALI+BANERJEE%2cJALEEL%2c+AALIYA%2c9781039713727"
+              },
+              {
+                "text": "Les libraires",
+                "url": "https://www.leslibraires.ca/livres/la-soiree-surprise-mitali-banerjee-ruths-9781039713727.html"
               }
             ]
           }
@@ -420,30 +448,42 @@
     },
     "pd4": {
       "series_title": {
-        "en": "The Party Diaries"
+        "en": "The Party Diaries",
+        "fr": "Les fêtes de Priya"
       },
       "series_order": 4,
       "title": {
-        "en": "Fairy-Tale Puppy Picnic"
+        "en": "Fairy-Tale Puppy Picnic",
+        "fr": "Le pique-nique des chiots"
       },
       "cover_image_src": {
-        "en": "/images/books_lander/Party4_en.jpg"
+        "en": "/images/books_lander/Party4_en.jpg",
+        "fr": "/images/books_lander/Party4_fr.jpg"
       },
       "blurbs": {
+        "main": {
+          "fr": "Dans le quatrième tome de cette série de premiers romans illustrés en couleurs, Priya vient en aide aux lycaons africains!"
+        },
         "details": {
-          "en": "Priya is planning a puppy picnic for her friend Dola! It has a fairy-tale theme because Dola's adorable puppy is named Prince! Priya starts her party-prep to-do list. She makes castle invitations, creates DIY crowns, and bakes cupcakes (and pupcakes!). But as the puppy picnic gets closer, it looks like it might rain. Priya tries not to worry, but the weather is not something she can check off her to-do list. Will she have to cancel the picnic?"
+          "en": "Priya is planning a puppy picnic for her friend Dola! It has a fairy-tale theme because Dola's adorable puppy is named Prince! Priya starts her party-prep to-do list. She makes castle invitations, creates DIY crowns, and bakes cupcakes (and pupcakes!). But as the puppy picnic gets closer, it looks like it might rain. Priya tries not to worry, but the weather is not something she can check off her to-do list. Will she have to cancel the picnic?",
+          "fr": "Priya organise un pique-nique pour son amie Dola et son chiot sur le thème des contes de fées, car l’adorable chiot de Dola s’appelle Prince! Priya commence à dresser la liste des choses à faire pour la fête. Elle prépare des invitations en forme de château, fabrique des couronnes et cuisine des petits gâteaux (ainsi que des gâteaux pour les chiots!). Mais le jour du pique-nique approche et il semble qu’il va pleuvoir. Priya essaie de ne pas s’inquiéter, mais elle ne peut pas contrôler la météo. Devra-t-elle annuler le pique-nique?"
         }
       },
       "release_date": {
-        "en": "June 7, 2024"
+        "en": "June 7, 2024",
+        "fr": "6 octobre 2026"
       },
       "isbn": {
         "isbn_10": "1338896903",
-        "isbn_13": "978-1338896909"
+        "isbn_13": "978-1338896909",
+        "fr": {
+          "isbn_10": "1039720145",
+          "isbn_13": "978-1039720145"
+        }
       },
       "action": {
         "en": "buy",
-        "fr": "buy"
+        "fr": "pre-order"
       },
       "action_links": {
         "en": [
@@ -479,10 +519,29 @@
                 "text": "Canada - Amazon",
                 "url": "https://www.amazon.ca/Fairy-Tale-Puppy-Picnic-Branches-Diaries/dp/1338896903/ref=sr_1_4?crid=1UBD74FEDLLAX&dib=eyJ2IjoiMSJ9.YRgl8Zrome_bMJ0hFOVyqRp2wWSCgYvrx2Irg1e8FV2z4gMOToV3S9vmGy6FnrpveL2DW01Jjf4nSRsiK1mOwXqL2rRPeg_ggWNmbt87QCnJDOE4HlX1if3yWWuw4hBb08q6vxBuJHGqeTOXi3zfgA.gK9Ka0ct0veM-Ts0GQZCczvNUG0NZDAG49TQIMARfao&dib_tag=se&keywords=mitali+banerjee+ruths&qid=1708554402&sprefix=mitali+banerj%2Caps%2C121&sr=8-4"
               },
-              { 
+              {
                 "text": "Canada - Chapters/Indigo",
                 "url": "https://www.indigo.ca/en-ca/fairy-tale-puppy-picnic-a-branches-book-the-party-diaries-4/9781338896909.html"
               },
+            ]
+          }
+        ],
+        "fr": [
+          {
+            "title": "Canada",
+            "items": [
+              {
+                "text": "Amazon",
+                "url": "https://www.amazon.ca/f%C3%AAtes-Priya-N%CB%9A-pique-nique-chiots/dp/1039720145/"
+              },
+              {
+                "text": "Renaud-Bray",
+                "url": "https://www.renaud-bray.com/Livres_Produit.aspx?id=4808543&def=Pique-nique+des+chiots(Le)+%2304%2CJALEEL%2C+AALIYA%2CRUTHS%2C+MITALI+BANERJEE%2C9781039720145"
+              },
+              {
+                "text": "Les libraires",
+                "url": "https://www.leslibraires.ca/livres/le-pique-nique-des-chiots-9781039720145"
+              }
             ]
           }
         ]

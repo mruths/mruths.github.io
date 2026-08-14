@@ -8,14 +8,41 @@ title:
 
 content_elements:
   - image:
-      src: /images/books/pd/PD_HeroImage_en.jpg
-  - image:
       src: /images/books/pd/join_priya.jpg
   - text:
       text: <b>In this full-color early chapter book series, Priya starts a party-planning business<br/>to help save the planet – one party at a time!</b>
       justify: center
   - text: |
       This series is part of Scholastic’s early chapter book line, Branches, aimed at newly independent readers. With easy-to-read text, high-interest content, fast-paced plots, and illustrations on every page, The Party Diaries are perfect for newly independent readers!
+  - header: "Book #6"
+  - image:
+      src: /images/books/pd/pd6_available.png
+  - text: Priya feels excited and nervous about planning a popstar karaoke party for her best friend Melissa. Priya loves coming up with party ideas, making to-do lists, and crafting invitations and decorations, but she doesn't know any of Melissa's dance friends who are coming to the party. Will they have fun? Will Priya fit in with them? And can Priya shake it all off and make the whole party shimmer?
+  - book_cards:
+    - book_id: pd6
+      hide_image: true
+      hide_content: true
+  - anchor: pd
+  - header: "Be a star! Get a copy :)"
+  - image_cards:
+      - image:
+          src: /images/books_main/mitali_letter.jpg
+      - content:
+          - text:
+              text: |
+                Dear readers,<br/><br/>
+                The Party Diaries Book 6 exists because of you, and this is the last book under contract… which means pre-orders really matter for the future of the series.<br/><br/>
+                Please pre-order and fill out <a href="https://forms.gle/6bvoAoRjapeahW2H9">this quick Google form</a> to receive exclusive bonus content and an invite to the virtual launch party!<br/><br/>
+                Thank you for your love of The Party Diaries.<br/><br/>
+                🧡 Mitali
+    card_pct_size: 45
+  - button:
+      text: Pre-order Bonus Form
+      url: https://forms.gle/6bvoAoRjapeahW2H9
+      justify: center
+  - header: The Party Diaries
+  - image:
+      src: /images/books/pd/PD_HeroImage_en.jpg
   - subheader:
       text: "Praise for Awesome Orange Birthday (The Party Diaries #1)"
       justify: center

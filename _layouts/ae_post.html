@@ -100,11 +100,13 @@ layout: body
             </div> <!-- .title -->
             <div class="blurbs">
               <div class="main"> {{ book.blurbs.main[nav_language] }}</div>
-              <div class="details"> 
+              <div class="details">
+                <!-- A book can carry per-language ISBNs (e.g. a French edition); fall back to the top-level ones -->
+                {% assign isbn = book.isbn[nav_language] | default: book.isbn %}
                 <p>{{ book.blurbs.details[nav_language] }}</p>
                 Release Date: {{ book.release_date[nav_language] }}<br/>
-                {% if book.isbn.isbn_10 and book.isbn.isbn_10 != "" %}ISBN-10: {{ book.isbn.isbn_10 }}<br/>{% endif %}
-                ISBN-13: {{ book.isbn.isbn_13 }}
+                {% if isbn.isbn_10 and isbn.isbn_10 != "" %}ISBN-10: {{ isbn.isbn_10 }}<br/>{% endif %}
+                ISBN-13: {{ isbn.isbn_13 }}
               </div>
             </div> <!-- .blurbs -->
             <div class="action-container">

@@ -18,6 +18,10 @@ content_elements:
       book_id: pd1
   - book_feature:
       book_id: pd2
+  - book_feature:
+      book_id: pd3
+  - book_feature:
+      book_id: pd4
   - image_cards:
       - image: 
           src: /images/books/Sanjay.png

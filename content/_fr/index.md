@@ -15,6 +15,8 @@ content_elements:
   - book_cards:
     - book_id: pd1 
     - book_id: pd2 
+    - book_id: pd3 
+    - book_id: pd4 
     #- image:
     #    src: /images/books_main/diary.png
     #    max_width: 100%
