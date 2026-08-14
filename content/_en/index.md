@@ -4,6 +4,11 @@ layout: ae_post
 use_footer: true
 
 content_elements:
+  - header: Coming Soon
+  - book_feature:
+      book_id: pd6
+  - book_feature:
+      book_id: jm1
   - anchor: pd
   - header: The Party Diaries
   - text: |
