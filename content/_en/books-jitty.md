@@ -6,6 +6,11 @@ use_footer: true
 title:
   text: Jitty and the Machine
 
+# No French Jitty page yet; without this the switcher would build /fr/books-jitty
+lang_switch:
+  fr:
+    url: /fr/books
+
 content_elements:
   - book_feature:
       book_id: jm1
